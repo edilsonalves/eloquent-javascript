@@ -39,21 +39,3 @@ verify(
   ['red platypus', 'wobbling nest'],
   ['earth bed', 'learning ape', 'BEET']
 );
-
-function verify(regexp, yes, no) {
-  if (regexp.source === '...') {
-    return;
-  }
-
-  for (let str of yes) {
-    if (!regexp.test(str)) {
-      console.log(`Failure to match '${str}'`);
-    }
-  }
-
-  for (let str of no) {
-    if (regexp.test(str)) {
-      console.log(`Unexpected match for '${str}'`);
-    }
-  }
-}
