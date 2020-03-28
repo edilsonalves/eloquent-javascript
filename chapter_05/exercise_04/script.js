@@ -9,7 +9,7 @@ function dominantDirection(text) {
     }
   }).filter(({ name }) => name !== 'none');
 
-  if (counted.length == 0) {
+  if (counted.length === 0) {
     return 'ltr';
   }
 
